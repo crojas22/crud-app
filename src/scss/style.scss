@@ -1,0 +1,19 @@
+@import "notepadPage";
+@import "individualNotePage";
+@import "loginpage";
+
+body {
+  height: 100vh;
+}
+
+.flexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+span {
+  display: inline-block;
+  margin-bottom: 16px;
+}

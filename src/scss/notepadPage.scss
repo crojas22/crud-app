@@ -1,0 +1,68 @@
+// NotePad Page layout
+
+.notepad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(150px, 200px) 70px 2fr 1fr;
+  grid-template-areas:
+  "header header header"
+  "navbar navbar navbar"
+  "main main main"
+  '. form .';
+}
+
+header {
+  grid-area: header;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    position: sticky;
+    top: 0px;
+  }
+}
+
+.header:not(h1) {
+  color: black;
+  &:hover {
+    color: blue;
+    transform: scale(1.5);
+  }
+}
+
+div .transparent {
+  margin-top: 5em;
+  width: 100%;
+  border-bottom: 2px solid lightgrey;
+  &:hover {
+    border-bottom: 2px solid black;
+  }
+}
+
+.card {
+  height: 10em;
+  position: relative;
+  margin: 14px 0px !important;
+}
+
+.buttons {
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+.navigation {
+  grid-area: navbar;
+  position: sticky;
+  top: 0px;
+  margin: 14px 0px !important;
+  background-color: white !important;
+  z-index: 1000 !important;
+}
+
+main {
+  grid-area: main;
+}
+
+form {
+  grid-area: form;
+}
